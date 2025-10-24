@@ -60,18 +60,25 @@ export const CoreValues: React.FC = () => {
               className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 overflow-hidden"
             >
               <CardContent className="p-0">
-                <div className={`h-48 bg-gradient-to-br ${value.color} relative`}>
-                  <div className="absolute inset-0 bg-black/10"></div>
+                <div className="relative h-48">
+                  <img 
+                    src={`https://images.unsplash.com/photo-${
+                      index === 0 ? '1560472354-b33ff0c44a43' : // Integrity - handshake
+                      index === 1 ? '1522202176988-64a2c463b7c' : // Teamwork - team meeting
+                      index === 2 ? '1551434678-e076c223a692' : // Excellence - trophy/success
+                      index === 3 ? '1507003211169-0a1dd7a838e' : // Leadership - leader
+                      '1556761175-b413da4baf72' // Quality - precision/quality
+                    }?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80`}
+                    alt={`${value.title} - Professional business image`}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${value.color} opacity-80`}></div>
                   <div className="absolute bottom-6 left-6 text-white">
                     <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3">
                       {value.icon}
                     </div>
                     <h3 className="text-xl font-bold">{value.title}</h3>
                   </div>
-                  
-                  {/* Decorative elements */}
-                  <div className="absolute top-6 right-6 w-16 h-16 bg-white/10 rounded-full"></div>
-                  <div className="absolute top-1/2 right-12 w-8 h-8 bg-white/20 rounded-full"></div>
                 </div>
                 
                 <div className="p-6">

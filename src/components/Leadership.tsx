@@ -24,21 +24,19 @@ export const Leadership: React.FC = () => {
           <div className="relative">
             <div className="bg-gradient-to-br from-red-600 to-red-800 rounded-3xl overflow-hidden shadow-2xl">
               <div className="aspect-[3/4] relative">
-                {/* Profile placeholder */}
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="w-32 h-32 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <Users className="h-16 w-16 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold">Mrs. Mariama Lemos</h3>
-                    <p className="text-red-100">Chief Executive Officer</p>
-                  </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  alt="Professional businesswoman representing Mrs. Mariama Lemos"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-red-900/80 to-transparent"></div>
+                <div className="absolute bottom-8 left-8 text-white">
+                  <h3 className="text-2xl font-bold">Mrs. Mariama Lemos</h3>
+                  <p className="text-red-100">Chief Executive Officer</p>
                 </div>
                 
                 {/* Decorative elements */}
                 <div className="absolute top-8 right-8 w-16 h-16 bg-white/10 rounded-full"></div>
-                <div className="absolute bottom-8 left-8 w-12 h-12 bg-white/10 rounded-full"></div>
               </div>
             </div>
             

@@ -44,8 +44,17 @@ export const Hero: React.FC = () => {
   const currentSlideData = slides[currentSlide];
 
   return (
-    <section id="home" className="min-h-screen bg-gradient-to-br from-gray-50 to-white ml-20 pt-16 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8 py-20 relative">
+    <section id="home" className="min-h-screen ml-20 pt-16 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+          alt="Modern office space representing business excellence"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-white/90"></div>
+      </div>
+      <div className="relative max-w-7xl mx-auto px-8 py-20 z-10">
         {/* Main Content */}
         <div className="text-center space-y-8 mb-16">
           <div className="space-y-4">

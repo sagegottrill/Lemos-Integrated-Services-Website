@@ -216,12 +216,16 @@ export const Contact: React.FC = () => {
             </div>
             
             <div className="p-12 flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="w-32 h-32 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Building className="h-16 w-16 text-white" />
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                  alt="Business handshake representing partnership excellence"
+                  className="w-full h-48 object-cover rounded-lg mb-6"
+                />
+                <div className="text-center text-white">
+                  <h4 className="text-xl font-bold mb-2">Partnership Excellence</h4>
+                  <p className="text-red-100">Building lasting business relationships</p>
                 </div>
-                <h4 className="text-xl font-bold mb-2">Partnership Excellence</h4>
-                <p className="text-red-100">Building lasting business relationships</p>
               </div>
             </div>
           </div>

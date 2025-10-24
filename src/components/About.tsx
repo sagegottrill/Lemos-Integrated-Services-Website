@@ -39,22 +39,20 @@ export const About: React.FC = () => {
           {/* Right Content - Image Area */}
           <div className="relative">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <div className="w-32 h-32 bg-red-600 rounded-full mx-auto flex items-center justify-center">
-                      <Building className="h-16 w-16 text-white" />
-                    </div>
-                    <div className="space-y-2">
-                      <h3 className="text-2xl font-bold text-gray-900">Nigerian Excellence</h3>
-                      <p className="text-gray-600">Integrated Business Solutions</p>
-                    </div>
-                  </div>
+              <div className="aspect-[4/3] relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Modern office building representing Nigerian business excellence"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">Nigerian Excellence</h3>
+                  <p className="text-white/90">Integrated Business Solutions</p>
                 </div>
                 
                 {/* Red accent */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-red-600 opacity-20"></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-red-600 opacity-10"></div>
               </div>
             </div>
           </div>
