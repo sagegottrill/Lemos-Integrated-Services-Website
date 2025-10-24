@@ -1,0 +1,88 @@
+import { Product } from '@/types/product';
+
+export const products: Product[] = [
+  {
+    id: '1',
+    name: 'Tangerine jacket',
+    price: 110,
+    category: 'tops',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311102272_cc67ad01.webp',
+  },
+  {
+    id: '2',
+    name: 'Bold red blazer',
+    price: 120,
+    category: 'tops',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311103292_30a90fa8.webp',
+  },
+  {
+    id: '3',
+    name: 'Cerulean silk top',
+    price: 55,
+    category: 'tops',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311104089_2491c133.webp',
+  },
+  {
+    id: '4',
+    name: 'Green blazer',
+    price: 95,
+    category: 'tops',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311117925_2108d9bd.webp',
+  },
+  {
+    id: '5',
+    name: 'Purple silk blouse',
+    price: 85,
+    category: 'tops',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311119001_47ac0482.webp',
+  },
+  {
+    id: '6',
+    name: 'Sky blue wide jeans',
+    price: 90,
+    category: 'pants',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311104795_2674d84a.webp',
+  },
+  {
+    id: '7',
+    name: 'Pinstripe pants',
+    price: 85,
+    category: 'pants',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311105559_3ff39aa8.webp',
+  },
+  {
+    id: '8',
+    name: 'Linen trousers',
+    price: 110,
+    category: 'pants',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311106295_3c2ef5ae.webp',
+  },
+  {
+    id: '9',
+    name: 'Mustard bag',
+    price: 150,
+    category: 'accessories',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311107032_78e4196b.webp',
+  },
+  {
+    id: '10',
+    name: 'Silk scarf',
+    price: 90,
+    category: 'accessories',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311107759_292a556e.webp',
+  },
+  {
+    id: '11',
+    name: 'Color pop sunglasses',
+    price: 120,
+    category: 'accessories',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311108509_51971a35.webp',
+  },
+  {
+    id: '12',
+    name: 'Pink heeled boots',
+    price: 160,
+    category: 'accessories',
+    image: 'https://d64gsuwffb70l.cloudfront.net/68fb792cf485dc546d72cf48_1761311116545_4341c8e7.webp',
+  },
+];
