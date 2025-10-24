@@ -1,102 +1,130 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Target, Eye, MapPin, Building } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Building } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            About Lemos Integrated Services
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A leading Nigerian integrated business services company committed to excellence, 
-            innovation, and sustainable growth across multiple sectors.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Company Overview</h3>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              Lemos Integrated Services (BN 3160134) is a dynamic Nigerian company that has established 
-              itself as a trusted partner in the integrated business services sector. With our headquarters 
-              in Maiduguri, Nigeria, we have built a reputation for delivering quality solutions that 
-              bridge local expertise with global standards.
-            </p>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              Our comprehensive approach to business services encompasses general contracts and merchandise, 
-              import and export operations, consultancy services, and general supply solutions. We pride 
-              ourselves on our Nigerian roots while maintaining a global perspective that enables us to 
-              serve clients across diverse markets and industries.
-            </p>
-            <div className="flex items-center text-gray-600 mb-4">
-              <Building className="h-5 w-5 mr-3 text-red-600" />
-              <span>Registered with Nigerian Corporate Affairs Commission</span>
-            </div>
-            <div className="flex items-center text-gray-600">
-              <MapPin className="h-5 w-5 mr-3 text-red-600" />
-              <span>Headquartered in Maiduguri, Nigeria</span>
+    <section id="about" className="py-24 bg-gray-50 ml-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-8">
+        {/* Hero Section - Inspired by Kevin Spacey design */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h1 className="text-6xl md:text-7xl font-bold text-gray-900 leading-tight">
+                Lemos
+                <span className="block text-red-600">Integrated</span>
+              </h1>
+              
+              <div className="space-y-4">
+                <p className="text-xl text-gray-700 leading-relaxed">
+                  We're all stories of our own business excellence.
+                </p>
+                
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Lemos Integrated Services has been Nigeria's trusted partner in business excellence, 
+                  delivering comprehensive solutions across multiple sectors. From our headquarters in 
+                  Maiduguri, we've built a reputation for quality, reliability, and innovation that 
+                  spans over a decade of dedicated service.
+                </p>
+              </div>
+              
+              <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full">
+                Learn More
+              </Button>
             </div>
           </div>
+
+          {/* Right Content - Image Area */}
+          <div className="relative">
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+              <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center space-y-4">
+                    <div className="w-32 h-32 bg-red-600 rounded-full mx-auto flex items-center justify-center">
+                      <Building className="h-16 w-16 text-white" />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-bold text-gray-900">Nigerian Excellence</h3>
+                      <p className="text-gray-600">Integrated Business Solutions</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Red accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-red-600 opacity-20"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-red-600 opacity-10"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* About Section */}
+        <div className="bg-white rounded-3xl p-12 shadow-xl mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-2 space-y-6">
+              <h2 className="text-3xl font-bold text-gray-900">ABOUT LEMOS</h2>
+              
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  Born in Maiduguri, Nigeria, Lemos Integrated Services emerged from a vision to bridge 
+                  local expertise with global standards. Our founder, Mrs. Mariama Lemos, established 
+                  the company with a clear mission: to provide exceptional integrated business services 
+                  that drive sustainable growth and success.
+                </p>
+                
+                <p>
+                  From humble beginnings, we've grown into a trusted partner for businesses across Nigeria 
+                  and beyond. Our comprehensive approach encompasses general contracts and merchandise, 
+                  import and export operations, consultancy services, and general supply solutions.
+                </p>
+                
+                <p>
+                  What sets us apart is our unwavering commitment to quality, reliability, and innovation. 
+                  We don't just deliver services; we build lasting relationships and contribute to 
+                  Nigeria's economic development through every project we undertake.
+                </p>
+              </div>
+            </div>
+            
+            <div className="space-y-8">
+              {/* Signature */}
+              <div className="text-center">
+                <div className="text-4xl font-script text-red-600 mb-4">Lemos</div>
+                <p className="text-sm text-gray-600">Founder & CEO Signature</p>
+              </div>
+              
+              {/* Stats */}
+              <div className="space-y-4">
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="text-2xl font-bold text-gray-900">BN 3160134</div>
+                  <div className="text-sm text-gray-600">Registration Number</div>
+                </div>
+                
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="text-2xl font-bold text-gray-900">Maiduguri</div>
+                  <div className="text-sm text-gray-600">Headquarters</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quote Section */}
+        <div className="text-center bg-gray-900 rounded-3xl p-12 text-white">
+          <blockquote className="text-3xl md:text-4xl font-bold mb-6 italic">
+            "I LOVE DOING BUSINESS."
+          </blockquote>
           
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Building className="h-10 w-10 text-red-600" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Registration Details</h4>
-              <p className="text-gray-700 mb-2">
-                <strong>Business Name:</strong> Lemos Integrated Services
-              </p>
-              <p className="text-gray-700 mb-2">
-                <strong>Registration Number:</strong> BN 3160134
-              </p>
-              <p className="text-gray-700 mb-2">
-                <strong>Regulatory Body:</strong> Nigerian Corporate Affairs Commission
-              </p>
-              <p className="text-gray-700">
-                <strong>Location:</strong> Maiduguri, Nigeria
-              </p>
-            </div>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold">EXCELLENCE</h3>
+            <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Excellence isn't just our standard—it's our promise. Every project, every partnership, 
+              every solution we deliver reflects our commitment to raising the bar and showcasing 
+              Nigeria's potential to the world.
+            </p>
           </div>
-        </div>
-
-        {/* Mission & Vision */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="border-l-4 border-l-red-600 shadow-lg">
-            <CardContent className="p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
-                  <Target className="h-6 w-6 text-red-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">Our Mission</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed">
-                To provide exceptional integrated business services that drive sustainable growth 
-                and success for our clients while contributing to Nigeria's economic development 
-                through innovation, quality, and reliability in all our operations.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-l-4 border-l-red-600 shadow-lg">
-            <CardContent className="p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
-                  <Eye className="h-6 w-6 text-red-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">Our Vision</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed">
-                To become the leading integrated business services provider in Nigeria and across 
-                Africa, recognized for our commitment to excellence, innovation, and our ability 
-                to create lasting value for all stakeholders while showcasing Nigeria's potential 
-                to the global community.
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

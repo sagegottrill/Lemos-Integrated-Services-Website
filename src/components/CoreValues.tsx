@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Shield, Users, Trophy, Crown, CheckCircle } from 'lucide-react';
+import { Shield, Users, Trophy, Crown, CheckCircle, Target, Eye } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export const CoreValues: React.FC = () => {
   const values = [
@@ -8,109 +9,138 @@ export const CoreValues: React.FC = () => {
       title: "Integrity",
       icon: <Shield className="h-8 w-8" />,
       description: "We conduct our business with the highest ethical standards, transparency, and honesty in all our interactions.",
-      color: "bg-red-600"
+      color: "from-blue-500 to-blue-600"
     },
     {
       title: "Teamwork",
       icon: <Users className="h-8 w-8" />,
       description: "We believe in the power of collaboration, fostering an environment where diverse talents unite for common goals.",
-      color: "bg-white"
+      color: "from-green-500 to-green-600"
     },
     {
       title: "Excellence",
       icon: <Trophy className="h-8 w-8" />,
       description: "We strive for excellence in every project, service, and interaction, continuously improving our standards.",
-      color: "bg-red-600"
+      color: "from-yellow-500 to-orange-500"
     },
     {
       title: "Leadership",
       icon: <Crown className="h-8 w-8" />,
       description: "We lead by example, inspiring innovation and positive change in our industry and communities.",
-      color: "bg-white"
+      color: "from-purple-500 to-purple-600"
     },
     {
       title: "Quality",
       icon: <CheckCircle className="h-8 w-8" />,
       description: "We are committed to delivering superior quality in all our services, exceeding client expectations consistently.",
-      color: "bg-red-600"
+      color: "from-red-500 to-red-600"
     }
   ];
 
   return (
-    <section id="core-values" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="core-values" className="py-24 bg-gray-50 ml-20">
+      <div className="max-w-7xl mx-auto px-8">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Core Values & Vision
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Core Values &
+            <span className="block text-red-600">Guiding Principles</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our core values guide every decision we make and every service we deliver, 
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            These fundamental values guide every decision we make and every service we deliver, 
             ensuring we maintain the highest standards of professionalism and integrity.
           </p>
         </div>
 
-        {/* Core Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {/* Values Grid - Inspired by KFC card layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {values.map((value, index) => (
             <Card 
               key={index} 
-              className={`${value.color} ${
-                value.color === 'bg-white' ? 'text-gray-900 shadow-lg border border-gray-200' : 'text-white border-0 shadow-lg'
-              } hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 overflow-hidden"
             >
-              <CardContent className="p-8 text-center">
-                <div className={`w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-6 ${
-                  value.color === 'bg-white' ? 'bg-red-100 text-red-600' : 'bg-white/20 text-white'
-                }`}>
-                  {value.icon}
+              <CardContent className="p-0">
+                <div className={`h-48 bg-gradient-to-br ${value.color} relative`}>
+                  <div className="absolute inset-0 bg-black/10"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3">
+                      {value.icon}
+                    </div>
+                    <h3 className="text-xl font-bold">{value.title}</h3>
+                  </div>
+                  
+                  {/* Decorative elements */}
+                  <div className="absolute top-6 right-6 w-16 h-16 bg-white/10 rounded-full"></div>
+                  <div className="absolute top-1/2 right-12 w-8 h-8 bg-white/20 rounded-full"></div>
                 </div>
-                <h3 className="text-xl font-bold mb-4">{value.title}</h3>
-                <p className={`text-sm leading-relaxed ${
-                  value.color === 'bg-white' ? 'text-gray-600' : 'text-white/90'
-                }`}>
-                  {value.description}
-                </p>
+                
+                <div className="p-6">
+                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Vision and Mission Side by Side */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <Card className="bg-red-600 text-white border-0 shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-center">Our Vision</h3>
-              <p className="text-lg leading-relaxed text-center text-white/95">
-                To become the leading integrated business services provider in Nigeria and across Africa, 
-                recognized for our commitment to excellence, innovation, and our ability to create lasting 
-                value for all stakeholders while showcasing Nigeria's potential to the global community.
-              </p>
+        {/* Mission & Vision Section - Inspired by KFC promotional cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {/* Mission Card */}
+          <Card className="overflow-hidden shadow-xl border-0">
+            <CardContent className="p-0">
+              <div className="bg-gradient-to-br from-red-600 to-red-800 text-white p-8 relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
+                    <Target className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold mb-4">Our Mission</h3>
+                  <p className="text-red-100 leading-relaxed">
+                    To provide exceptional integrated business services that drive sustainable growth 
+                    and success for our clients while contributing to Nigeria's economic development 
+                    through innovation, quality, and reliability in all our operations.
+                  </p>
+                </div>
+              </div>
             </CardContent>
           </Card>
 
-          <Card className="bg-white border border-gray-200 shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-center text-gray-900">Our Mission</h3>
-              <p className="text-lg leading-relaxed text-center text-gray-700">
-                To provide exceptional integrated business services that drive sustainable growth and 
-                success for our clients while contributing to Nigeria's economic development through 
-                innovation, quality, and reliability in all our operations.
-              </p>
+          {/* Vision Card */}
+          <Card className="overflow-hidden shadow-xl border-0">
+            <CardContent className="p-0">
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 text-white p-8 relative">
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-tr-full"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
+                    <Eye className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold mb-4">Our Vision</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    To become the leading integrated business services provider in Nigeria and across 
+                    Africa, recognized for our commitment to excellence, innovation, and our ability 
+                    to create lasting value for all stakeholders while showcasing Nigeria's potential 
+                    to the global community.
+                  </p>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
 
-        {/* Additional Vision Statement */}
-        <div className="mt-16 text-center">
-          <div className="bg-gray-50 p-8 rounded-lg max-w-4xl mx-auto">
-            <h4 className="text-xl font-bold text-gray-900 mb-4">Our Commitment</h4>
-            <p className="text-gray-700 leading-relaxed">
-              At Lemos Integrated Services, we are committed to building bridges between Nigerian 
-              businesses and global opportunities. We believe in the power of quality service delivery, 
-              sustainable business practices, and the positive representation of Nigeria in the 
-              international business community. Our success is measured not just by our growth, 
-              but by the positive impact we create for our clients, partners, and the broader community.
-            </p>
+        {/* Bottom CTA Section */}
+        <div className="bg-white rounded-3xl p-12 shadow-xl text-center">
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to Experience Excellence?</h3>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join hundreds of satisfied clients who trust Lemos Integrated Services 
+            for their business needs. Let's build something great together.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-medium">
+              Start Your Project
+            </Button>
+            <Button className="bg-white border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-full font-medium">
+              Schedule Consultation
+            </Button>
           </div>
         </div>
       </div>
